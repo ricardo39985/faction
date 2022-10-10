@@ -8,8 +8,8 @@
       <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">View</span>
 
     </a>
-    <form action=<%=`/companies/${company._id}?_method=DELETE` %>>
-      <button class="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Delete</button>
+    <form method="post" action=<%=`/companies/${company._id}?_method=DELETE` %>>
+      <button type="submit" class="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Delete</button>
     </form>
     <a href=<%= `/companies/${company._id}/edit` %> >
       <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Edit</span>
