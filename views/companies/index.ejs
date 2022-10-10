@@ -1,0 +1,8 @@
+<%- include('../partials/nav') %>
+
+<h1>Index</h1>
+<div class="grid grid-cols-4 grid-flow-col gap-4 w-5/6 mx-auto">
+  <% companies.forEach(company => {%>
+    <%- include('../partials/companies/companyCard',{company}) %>
+  <% }); %>
+</div>
