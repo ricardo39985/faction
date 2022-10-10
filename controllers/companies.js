@@ -20,7 +20,11 @@ function create(req, res) {
   });
 }
 function deleteCompany(req, res) {
-  res.redirect('/');
+  sendToHomeIfNotAuthorized(req, res);
+  Company.findById(req.params.id, function (err, company) {
+    company.remove();
+    res.redirect('/companies');
+  });
 }
 function show(req, res) {
   res.render('companies/show');
@@ -33,4 +37,12 @@ function index(req, res) {
     res.render('companies/index', { companies });
   });
 }
-function edit(req, res) {}
+function edit(req, res) {
+  res.render('companies/edit');
+}
+
+function sendToHomeIfNotAuthorized(req, res) {
+  Company.findById(req.params.id, function (err, company) {
+    if (!company.user._id.equals(req.user._id)) res.redirect('/');
+  });
+}
