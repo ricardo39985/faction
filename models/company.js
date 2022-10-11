@@ -6,6 +6,7 @@ const companySchema = new Schema(
     name: String,
     user: { type: Schema.Types.ObjectId, ref: 'User' },
     phone: Number,
+    avatar: String
   },
   {
     timestamps: true,
