@@ -1,0 +1,17 @@
+<tr class=" hover:bg-cyan-50 ">
+  <td class="p-2 whitespace-nowrap">
+    <div class="flex items-center">
+      <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src= <%= employee.avatar %>  width="40" height="40" alt="Alex Shatov"></div>
+      <div class="font-medium text-gray-800"><%= `${employee.firstName} ${employee.lastName}` %> </div>
+    </div>
+  </td>
+  <td class="p-2 whitespace-nowrap">
+    <div class="text-left"><%= employee.email %> </div>
+  </td>
+  <td class="p-2 whitespace-nowrap">
+    <div class="text-left font-medium text-green-500">$<%= employee.rate %> </div>
+  </td>
+  <td class="p-2 whitespace-nowrap">
+    <div class="text-lg text-center"><span><a href=<%= `/companies/${company._id}/employees/${employee._id}` %>><button class="outline  rounded-lg  outline-green-400 hover:bg-green-700  hover:text-white  px-2 ml-4 mb-3 outline-1">View</button></a></span><span><a href=""><button class="outline rounded-lg hover:outline-none hover:shadow-md  hover:text-white  hover:bg-pink-700 outline-pink-400 px-2 ml-4 mb-3 outline-1">Edit</button></a></span></div>
+  </td>
+</tr>

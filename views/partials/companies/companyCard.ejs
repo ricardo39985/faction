@@ -1,18 +1,23 @@
-<div class="outline outline-blue-400 rounded-2xl">
-  <h1><%= company.name %> </h1>
-  <div>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eos quas earum nemo neque, ratione fugit iure veniam officia enim porro maiores est incidunt debitis, odit voluptatem. Perferendis, tempore? Quia?</p>
-  </div>
-  <div class="flex px-6 pt-4">
-    <a href=<%= `/companies/${company._id}` %>>
-      <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">View</span>
+<div class="outline outline-blue-400 rounded-2xl outline-1 hover:shadow-2xl hover:shadow-gray-500">
+  <a href=<%= `/companies/${company._id}` %>>
+    <div class="w-5/6 m-auto mt-2 ">
+      <img class="rounded-lg" src=<%= company.avatar %> alt="">
+    </div>
+    <div>
 
-    </a>
-    <form method="post" action=<%=`/companies/${company._id}?_method=DELETE` %>>
-      <button type="submit" class="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Delete</button>
-    </form>
-    <a href=<%= `/companies/${company._id}/edit` %> >
-      <span class="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Edit</span>
-    </a>
-  </div>
+      <h1 class="text-center text-3xl"><%= company.name %> </h1>
+      <div>
+        <p class="px-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eos quas earum nemo neque, ratione fugit iure veniam officia enim porro maiores est incidunt debitis, odit voluptatem. Perferendis, tempore? Quia?</p>
+      </div>
+      <div class="flex w-2/3 flex-row mx-auto justify-between">
+
+        <form method="post" action=<%=`/companies/${company._id}?_method=DELETE` %>>
+          <button type="submit" class="inline-block bg-red-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Delete</button>
+        </form>
+        <a href=<%= `/companies/${company._id}/edit` %>>
+          <span class="inline-block bg-blue-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Edit</span>
+        </a>
+      </div>
+    </div>
+  </a>
 </div>

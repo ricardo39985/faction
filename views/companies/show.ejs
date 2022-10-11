@@ -1,3 +1,40 @@
 <%- include('../partials/nav') %>
 
-<h1>SHow</h1>
+
+<div>
+  <div class="w-3/5  mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+    <header class="px-5 py-4 border-b border-gray-100">
+      <h2 class="font-semibold text-gray-800 text-center text-3xl font-serif"><%= `Employees at ${company.name}` %> </h2>
+    </header>
+    <div class="p-3">
+      <div class="overflow-x-auto">
+        <table class="table-auto w-full">
+          <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+            <tr>
+              <th class="p-2 whitespace-nowrap">
+                <div class="font-semibold text-left">Name</div>
+              </th>
+              <th class="p-2 whitespace-nowrap">
+                <div class="font-semibold text-left">Email</div>
+              </th>
+              <th class="p-2 whitespace-nowrap">
+                <div class="font-semibold text-left">Rate</div>
+              </th>
+              <th class="p-2 whitespace-nowrap">
+                <div class="font-semibold text-center">Actions</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="text-sm divide-y divide-gray-100">
+            <% employees.forEach(employee => {%>
+            <%- include('../partials/employees/employeeTableRow',{company, employee}) %>
+
+            <% }); %>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <a href=<%= `/companies/${company._id}/employees/new` %>><button class="outline rounded-lg hover:bg-blue-400 hover:outline-none hover:shadow-md  hover:text-white hover:text-xl hover:shadow-blue-400 outline-green-400 px-2 ml-4 mb-3 outline-1">Add employee</button></a>
+  </div>
+</div>
