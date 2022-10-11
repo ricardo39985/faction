@@ -27,7 +27,12 @@ function deleteCompany(req, res) {
   });
 }
 function show(req, res) {
-  res.render('companies/show');
+  sendToHomeIfNotAuthorized(req,res)
+  Company.findById(req.params.id, function(err,company) {
+    console.log(company)
+    res.render('companies/show',{company});
+
+  })
 }
 function update(req, res) {
   res.render('companies/update');
