@@ -1,5 +1,7 @@
 const Employee = require('../models/employee');
 const Company = require('../models/company')
+const { faker } = require('@faker-js/faker');
+
 module.exports = {
   new: newEmployee,
   create,
@@ -21,9 +23,12 @@ function create(req, res) {
  console.log(req.body)
  Company.findById(req.params.companyid, function (err, company) {
   const newEmployee= new Employee(req.body)
+  newEmployee.avatar= faker.image.people(480, 480, true)
   newEmployee.company= company
-  console.log(newEmployee)
-  res.redirect(`/companies/${company._id}/employees/${newEmployee._id}`)
+  newEmployee.save(function (err) {
+    res.redirect(`/companies/${company._id}/employees/${newEmployee._id}`)
+
+  })
  })
 }
 function deleteEmployee(req, res) {
