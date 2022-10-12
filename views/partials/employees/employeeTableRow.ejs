@@ -12,6 +12,6 @@
     <div class="text-left font-medium text-green-500">$<%= employee.rate %> </div>
   </td>
   <td class="p-2 whitespace-nowrap">
-    <div class="text-lg text-center"><span><a href=<%= `/companies/${company._id}/employees/${employee._id}` %>><button class="outline  rounded-lg  outline-green-400 hover:bg-green-700  hover:text-white  px-2 ml-4 mb-3 outline-1">View</button></a></span><span><a href=""><button class="outline rounded-lg hover:outline-none hover:shadow-md  hover:text-white  hover:bg-pink-700 outline-pink-400 px-2 ml-4 mb-3 outline-1">Edit</button></a></span></div>
+    <div class="text-lg text-center"><span><a href=<%= `/companies/${company._id}/employees/${employee._id}` %>><button class="outline  rounded-lg  outline-green-400 hover:bg-green-700  hover:text-white  px-2 ml-4 mb-3 outline-1">View</button></a></span><span><a href="<%= `/companies/${employee.company._id}/employees/${employee._id}/edit` %>"><button class="outline rounded-lg hover:outline-none hover:shadow-md  hover:text-white  hover:bg-pink-700 outline-pink-400 px-2 ml-4 mb-3 outline-1">Edit</button></a></span></div>
   </td>
 </tr>

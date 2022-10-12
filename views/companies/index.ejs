@@ -1,8 +1,33 @@
 <%- include('../partials/nav') %>
 
-<h1>Index</h1>
-<div class="grid grid-cols-3  gap-4 w-5/6 mx-auto mb-4 ">
+<% if (companies.length) {%>
+<div class="grid grid-cols-3  gap-4 w-5/6 mx-auto mb-4 mt-20">
   <% companies.forEach(company => {%>
-    <%- include('../partials/companies/companyCard',{company}) %>
+  <%- include('../partials/companies/companyCard',{company}) %>
   <% }); %>
+
 </div>
+<%} else {%>
+  <div class="w-1/4 mx-auto mt-44 text-center">
+    <h1 class="mb-8 text-2xl text-gray-600">You have not registered any companies</h1> <hr class="mb-12">
+    <a  href="/companies/new" class="
+
+          px-6
+          py-2.5
+          bg-cyan-600
+          text-white
+          font-medium
+          text-2xl
+          leading-tight
+          uppercase
+          rounded-xl
+          shadow-md
+          hover:bg-green-300 hover:shadow-xl hover:outline hover:outline-green-300 hover:shadow-green-400 hover:text-gray-700
+          focus:bg-cyan-700 focus:shadow-lg focus:outline-none focus:ring-0
+          active:bg-cyan-800 active:shadow-lg
+          transition
+          duration-150
+          ease-in-out">Register First Company</a>
+  </div>
+
+<%} %>

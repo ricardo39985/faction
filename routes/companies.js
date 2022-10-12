@@ -9,6 +9,8 @@ router.post('/', isLoggedIn, companiesCtrl.create)
 router.get('/:id', isLoggedIn,companiesCtrl.show)
 router.get('/:id/edit', isLoggedIn,companiesCtrl.edit)
 router.delete('/:id', isLoggedIn,companiesCtrl.delete)
+router.post('/:id', isLoggedIn, companiesCtrl.update)
+
 
 
 

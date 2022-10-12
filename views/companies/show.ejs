@@ -1,6 +1,13 @@
 <%- include('../partials/nav') %>
-
-
+<div class="flex w-3/5 flex-row mx-auto justify-start mt-8">
+  <form method="post" action=<%=`/companies/${company._id}?_method=DELETE` %>>
+    <button type="submit" class="inline-block bg-red-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Delete</button>
+  </form>
+  <a href=<%= `/companies/${company._id}/edit` %>>
+    <span class="inline-block bg-blue-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Edit</span>
+  </a>
+  <a href=<%= `/companies/${company._id}/employees/new` %>><span class="inline-block bg-green-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-21">Add employee</span></a>
+</div>  
 <div>
   <div class="w-3/5  mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
     <header class="px-5 py-4 border-b border-gray-100">
@@ -28,13 +35,12 @@
           <tbody class="text-sm divide-y divide-gray-100">
             <% employees.forEach(employee => {%>
             <%- include('../partials/employees/employeeTableRow',{company, employee}) %>
-
             <% }); %>
 
           </tbody>
         </table>
       </div>
     </div>
-    <a href=<%= `/companies/${company._id}/employees/new` %>><button class="outline rounded-lg hover:bg-blue-400 hover:outline-none hover:shadow-md  hover:text-white hover:text-xl hover:shadow-blue-400 outline-green-400 px-2 ml-4 mb-3 outline-1">Add employee</button></a>
+
   </div>
 </div>

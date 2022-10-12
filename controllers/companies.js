@@ -18,7 +18,7 @@ function newCompany(req, res) {
 function create(req, res) {
   const newCompany = new Company(req.body);
   newCompany.user = req.user;
-  newCompany.avatar = faker.image.imageUrl(640, 480, `${newCompany.name}`, true);
+  newCompany.avatar = faker.image.imageUrl(240, 240, `${newCompany.name}`, true);
   newCompany.save(function (err) {
     giveTenEmployees(newCompany);
     res.redirect(`/companies/${newCompany._id}`);
@@ -35,13 +35,15 @@ function show(req, res) {
   sendToHomeIfNotAuthorized(req, res);
   Company.findById(req.params.id, function (err, company) {
     Employee.find({ company }, function (err, employees) {
-      console.log(employees);
       res.render('companies/show', { company, employees });
     });
   });
 }
 function update(req, res) {
-  res.render('companies/update');
+  Company.findOneAndUpdate(req.params.id, req.body, function (err,company) {
+
+    res.redirect(`/companies/${company._id}`);
+  })
 }
 function index(req, res) {
   Company.find({ user: req.user }, function (err, companies) {
@@ -49,7 +51,10 @@ function index(req, res) {
   });
 }
 function edit(req, res) {
-  res.render('companies/edit');
+  Company.findById(req.params.id, function (err, company) {
+    res.render('companies/edit',{company});
+
+  })
 }
 
 function sendToHomeIfNotAuthorized(req, res) {
@@ -91,7 +96,6 @@ function giveTenEmployees(company) {
     newPerson.rate = faker.datatype.number({ min: 18, max: 45 });
     newPerson.avatar = faker.image.people(480, 480, true);
     newPerson.company = company;
-    console.log(newPerson);
     newPerson.save();
   }
   company.save();
