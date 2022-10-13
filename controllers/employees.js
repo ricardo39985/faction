@@ -57,8 +57,8 @@ function edit(req, res) {
   });
 }
 
-function sendToHomeIfNotAuthorized(req, res) {
-  Company.findById(req.params.companyid, function (err, company) {
-    if (!company.user._id.equals(req.user._id)) res.redirect('/');
-  });
-}
+// function sendToHomeIfNotAuthorized(req, res) {
+//   Company.findById(req.params.companyid, function (err, company) {
+//     if (!company.user._id.equals(req.user._id)) res.redirect('/');
+//   });
+// }
