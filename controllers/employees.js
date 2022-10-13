@@ -13,14 +13,11 @@ module.exports = {
 };
 
 function newEmployee(req, res) {
-  console.log(req.params);
   Company.findById(req.params.companyid, function (err, company) {
-    console.log(company);
     res.render('employees/new', { company });
   });
 }
 function create(req, res) {
-  console.log(req.body);
   Company.findById(req.params.companyid, function (err, company) {
     const newEmployee = new Employee(req.body);
     newEmployee.avatar = faker.image.people(80, 48, true);
