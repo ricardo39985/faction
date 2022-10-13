@@ -28,14 +28,14 @@ function create(req, res) {
   });
 }
 function deleteEmployee(req, res) {
-  sendToHomeIfNotAuthorized(req, res);
+  // sendToHomeIfNotAuthorized(req, res);
   Employee.findById(req.params.employeeid, function (err, employee) {
     employee.remove();
     res.redirect(`/companies/${req.params.companyid}`);
   });
 }
 function show(req, res) {
-  sendToHomeIfNotAuthorized(req, res);
+  // sendToHomeIfNotAuthorized(req, res);
   Employee.findById(req.params.employeeid, function (err, employee) {
     res.render('employees/show', { employee });
   });
@@ -51,7 +51,7 @@ function index(req, res) {
   });
 }
 function edit(req, res) {
-  sendToHomeIfNotAuthorized(req, res);
+  // sendToHomeIfNotAuthorized(req, res);
   Employee.findById(req.params.employeeid, function (err, employee) {
     res.render('employees/edit', { employee });
   });
