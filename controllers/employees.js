@@ -20,7 +20,7 @@ function newEmployee(req, res) {
 function create(req, res) {
   Company.findById(req.params.companyid, function (err, company) {
     const newEmployee = new Employee(req.body);
-    newEmployee.avatar = faker.image.people(80, 48, true);
+    newEmployee.avatar = faker.image.people(48, 48, true);
     newEmployee.company = company;
     newEmployee.save(function (err) {
       res.redirect(`/companies/${company._id}/employees/${newEmployee._id}`);
