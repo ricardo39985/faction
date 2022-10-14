@@ -19,10 +19,9 @@
    <a href="https://tailwindcss.com/">
     <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" />
   </a>&nbsp;&nbsp;
- <a href=" https://www.mongodb.com/">
+ <a href="https://www.mongodb.com/">
     <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" />
   </a>&nbsp;&nbsp;
-
 </p>
 
 > A fullstack application for payroll professionals to manage employee payment records for various organizations
