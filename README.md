@@ -32,7 +32,7 @@
 
 <br>
 
-## :sparkles Features
+## :sparkles: Features
 
 :heavy_check_mark: RESTful Routing\
 :heavy_check_mark: Full Crud Functionality\
