@@ -24,32 +24,35 @@ function create(req, res) {
     res.redirect(`/companies/${newCompany._id}`);
   });
 }
+
 function deleteCompany(req, res) {
-  sendToHomeIfNotAuthorized(req, res);
   Company.findById(req.params.id, function (err, company) {
     company.remove();
     res.redirect('/companies');
   });
 }
+
 function show(req, res) {
-  sendToHomeIfNotAuthorized(req, res);
   Company.findById(req.params.id, function (err, company) {
     Employee.find({ company }, function (err, employees) {
       res.render('companies/show', { company, employees });
     });
   });
 }
+
 function update(req, res) {
   Company.findOneAndUpdate(req.params.id, req.body, function (err,company) {
 
     res.redirect(`/companies/${company._id}`);
   })
 }
+
 function index(req, res) {
   Company.find({ user: req.user }, function (err, companies) {
     res.render('companies/index', { companies });
   });
 }
+
 function edit(req, res) {
   Company.findById(req.params.id, function (err, company) {
     res.render('companies/edit',{company});
