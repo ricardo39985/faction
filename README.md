@@ -1,15 +1,21 @@
 <h1 align="center">Welcome to Faction 👋</h1>
 <p align="center"><small >A better way to manage payroll.</small></p>
 <p>
-  <a href="https://www.npmjs.com/package/faction" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/faction.svg">
-  </a>
-  <a href="https://github.com/ricardo39985/faction" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://opensource.org/licenses/MIT" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
+  <a href="https://www.linkedin.com/in/ricardo-persaud/">
+    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>&nbsp;&nbsp;
+<a href="https://nodejs.org/en/   ">
+    <img src="	https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  </a>&nbsp;&nbsp;
+  <a href="https://www.w3.org/TR/CSS/#css">
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  </a>&nbsp;&nbsp;
+  <a href="https://html.spec.whatwg.org/multipage/">
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  </a>&nbsp;&nbsp;
+  <a href="https://www.javascript.com/">
+    <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+  </a>&nbsp;&nbsp;
 </p>
 
 > A fullstack application for payroll professionals to manage employee payment records for various organizations
@@ -22,16 +28,12 @@
 
 ## Screenshots
 
-![Alt text](./screenshots/home.png "Home")
-![Alt text](./screenshots/companies.png "Companies")
-![Alt text](./screenshots/company.png "Company")
-![Alt text](./screenshots/newCompany.png "New Company")
-![Alt text](./screenshots/newEmployee.png "New Employee")
-![Alt text](./screenshots/employee.png "New Employee")
-
-
-
-
+![Alt text](./screenshots/home.png 'Home')
+![Alt text](./screenshots/companies.png 'Companies')
+![Alt text](./screenshots/company.png 'Company')
+![Alt text](./screenshots/newCompany.png 'New Company')
+![Alt text](./screenshots/newEmployee.png 'New Employee')
+![Alt text](./screenshots/employee.png 'New Employee')
 
 ## Technologies Used
 
@@ -47,7 +49,7 @@ The following tools were used in this project:
 
 ## Install
 
-```sh
+````sh
 npm i
 ```a
 
@@ -55,28 +57,25 @@ npm i
 
 ```sh
 node server.js
-```
-
+````
 
 ## Roadmap
 
 - [x] Add Changelog
 - [x] Add Payment model
-- [ ] Add Additional Templates w/ Examples
 - [ ] Add more fields to Employee model
-    - [ ] Hired
-    - [ ] Reports to
-    - [ ] SSN
+  - [ ] Hired
+  - [ ] Reports to
+  - [ ] SSN
 
 See the [open issues](https://github.com/ricardo39985/faction/issues) for a full list of proposed features (and known issues).
-
 
 ## Author
 
 👤 **Ricardo Persaud**
 
-* Github: [@ricardo39985](https://github.com/ricardo39985)
-* LinkedIn: [@ricardopersaudcodes](https://linkedin.com/in/ricardopersaudcodes)
+- Github: [@ricardo39985](https://github.com/ricardo39985)
+- LinkedIn: [@ricardopersaudcodes](https://linkedin.com/in/ricardopersaudcodes)
 
 ## 🤝 Contributing
 
@@ -91,5 +90,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2022 [Ricardo Persaud](https://github.com/ricardo39985).<br />
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 
-***
+---
+
 _This project was built with ❤️ by [Ricardo Persaud](https://github.com/ricardo39985)_
