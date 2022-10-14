@@ -28,7 +28,6 @@
 ![Alt text](./screenshots/newCompany.png "New Company")
 ![Alt text](./screenshots/newEmployee.png "New Employee")
 ![Alt text](./screenshots/employee.png "New Employee")
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -45,7 +44,6 @@ The following tools were used in this project:
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Install
 
@@ -58,7 +56,6 @@ npm i
 ```sh
 node server.js
 ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Roadmap
@@ -73,7 +70,6 @@ node server.js
 
 See the [open issues](https://github.com/ricardo39985/faction/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Author
 
