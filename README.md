@@ -26,6 +26,17 @@
 
 <br>
 
+## :sparkles Features
+
+:heavy_check_mark: RESTful Routing\
+:heavy_check_mark: Full Crud Functionality\
+:heavy_check_mark: MVC\
+:heavy_check_mark: MongoDB\
+:heavy_check_mark: Oauth authentication\
+:heavy_check_mark: Basic Authorization\
+:heavy_check_mark: Tailwind CSS Styling
+
+
 ## Screenshots
 
 ![Alt text](./screenshots/home.png 'Home')
