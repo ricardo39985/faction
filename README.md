@@ -87,6 +87,28 @@ node server.js
 
 See the [open issues](https://github.com/ricardo39985/faction/issues) for a full list of proposed features (and known issues).
 
+
+## Code Snippets
+
+```
+<!-- New -->
+function newCompany(req, res) {
+  res.render('companies/new');
+}
+<!-- Create -->
+function create(req, res) {
+  const newCompany = new Company(req.body);
+  newCompany.user = req.user;
+  newCompany.avatar = faker.image.imageUrl(240, 240, `${newCompany.name}`, true);
+  newCompany.save(function (err) {
+    giveTenEmployees(newCompany);
+    res.redirect(`/companies/${newCompany._id}`);
+  });
+}
+
+```
+
+
 ## Author
 
 👤 **Ricardo Persaud**
